@@ -158,9 +158,9 @@ def main():
         image, width, height = load_image(uploaded_file)
 
         # Load YOLO model and class names
-        config_path = 'yolov3.cfg'
-        weights_path = 'yolov3.weights'
-        coco_names_path = 'coco.names'
+        config_path = './yolov3.cfg'
+        weights_path = './yolov3.weights'
+        coco_names_path = './coco.names'
 
         net = cv2.dnn.readNet(weights_path, config_path)
         with open(coco_names_path, 'r') as f:
